@@ -1,0 +1,45 @@
+{
+  "name": "light-dial",
+  "version": "1.0.0",
+  "description": "A small control for the light in a scene: where it comes from and how strong it is. Drop-in Web Component, no dependencies.",
+  "license": "MIT",
+  "author": {
+    "name": "Likemiens",
+    "url": "https://github.com/Likemiens"
+  },
+  "homepage": "https://likemiens.com/ui/light-dial",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Likemiens/light-dial.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Likemiens/light-dial/issues"
+  },
+  "type": "module",
+  "private": true,
+  "main": "./light-dial.js",
+  "module": "./light-dial.js",
+  "types": "./light-dial.d.ts",
+  "exports": {
+    ".": {
+      "types": "./light-dial.d.ts",
+      "import": "./light-dial.js"
+    }
+  },
+  "files": [
+    "light-dial.js",
+    "light-dial.d.ts"
+  ],
+  "keywords": [
+    "web-component",
+    "custom-element",
+    "light",
+    "lighting",
+    "three.js",
+    "dial",
+    "angle",
+    "slider",
+    "shadow",
+    "no-dependencies"
+  ]
+}
