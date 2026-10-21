@@ -90,11 +90,11 @@ The angle turns the same way three.js counts `rotation.y`, so there is no sign t
 ### With a bundler
 
 ```bash
-npm install github:Likemiens/light-dial
+npm i github:Likemiens/light-dial
 ```
 
 ```js
-import "light-dial"; // registers <light-dial>
+import "@likemiens/light-dial"; // registers <light-dial>
 ```
 
 Import it in the browser only: the module needs `document` when it loads. With server rendering, import it in `useEffect`, `onMounted` or the like.
@@ -152,7 +152,7 @@ dial.value;          // { angle, intensity }, what the events carry
 The module also exports the class and the helper that folds angles:
 
 ```js
-import { LightDial, wrapAngle } from "light-dial";
+import { LightDial, wrapAngle } from "@likemiens/light-dial";
 
 wrapAngle(270); // -90
 ```

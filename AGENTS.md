@@ -10,7 +10,7 @@ Notes for coding agents adding `<light-dial>` to a project.
 
 - CDN, pinned: `<script type="module" src="https://cdn.jsdelivr.net/gh/Likemiens/light-dial@v1.0.0/light-dial.js"></script>`
 - Always the latest: `https://likemiens.com/ui/light-dial/light-dial.js` (CORS open). Pin a tag for production.
-- npm: `npm install github:Likemiens/light-dial`, then `import "light-dial"`. Types: `light-dial.d.ts`.
+- npm: `npm i github:Likemiens/light-dial`, then `import "@likemiens/light-dial"`. Types: `light-dial.d.ts`.
 - Vendored: copy `light-dial.js` (and `light-dial.d.ts`) into the project and import it as a module.
 
 ## Contract
@@ -52,7 +52,7 @@ First paint: events fire only on user input. Read `dial.value` once the element 
 
 - It is an ES module: use `<script type="module">` or `import`. A classic `<script>` fails on `export`.
 - SSR (Next.js, Nuxt, SvelteKit…): the module touches `document` and `HTMLElement` when it loads. Import it on the client only (`useEffect`, `onMounted`, `onMount`, a dynamic `import()`). Rendering the tag on the server is fine; it upgrades when the module runs.
-- Vite: a file in `public/` can't be imported by a bare path in dev (`import("/light-dial.js")`). Vite appends `?import` and refuses it. Install the package and `import "light-dial"`, or import by a full URL: `import(/* @vite-ignore */ new URL("/light-dial.js", location.origin).href)`.
+- Vite: a file in `public/` can't be imported by a bare path in dev (`import("/light-dial.js")`). Vite appends `?import` and refuses it. Install the package and `import "@likemiens/light-dial"`, or import by a full URL: `import(/* @vite-ignore */ new URL("/light-dial.js", location.origin).href)`.
 - React 19 passes `angle`, `intensity`, `label`, `disabled` and `state` to the element as properties. Listen with a ref and `addEventListener("input", …)` in an effect. React 18 and older set attributes only, and `disabled={false}` becomes `disabled="false"`, which still disables: pass `disabled={flag || undefined}`.
 - TypeScript + JSX: add `"light-dial"` to `JSX.IntrinsicElements` yourself; the `.d.ts` types the DOM only.
 - Until the module runs, the tag is an empty inline element. Reserve its room: `light-dial:not(:defined) { display: block; height: 56px; }` (64 px on touch screens).

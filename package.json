@@ -1,5 +1,5 @@
 {
-  "name": "light-dial",
+  "name": "@likemiens/light-dial",
   "version": "1.0.0",
   "description": "A small control for the light in a scene: where it comes from and how strong it is. Drop-in Web Component, no dependencies.",
   "license": "MIT",
@@ -16,7 +16,6 @@
     "url": "https://github.com/Likemiens/light-dial/issues"
   },
   "type": "module",
-  "private": true,
   "main": "./light-dial.js",
   "module": "./light-dial.js",
   "types": "./light-dial.d.ts",
@@ -41,5 +40,8 @@
     "slider",
     "shadow",
     "no-dependencies"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
