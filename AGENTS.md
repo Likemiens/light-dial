@@ -10,7 +10,7 @@ Notes for coding agents adding `<light-dial>` to a project.
 
 - CDN, pinned: `<script type="module" src="https://cdn.jsdelivr.net/gh/Likemiens/light-dial@v1.0.0/light-dial.js"></script>`
 - Always the latest: `https://likemiens.com/ui/light-dial/light-dial.js` (CORS open). Pin a tag for production.
-- npm: `npm i github:Likemiens/light-dial`, then `import "@likemiens/light-dial"`. Types: `light-dial.d.ts`.
+- npm: `npm i @likemiens/light-dial`, then `import "@likemiens/light-dial"`. Types: `light-dial.d.ts`.
 - Vendored: copy `light-dial.js` (and `light-dial.d.ts`) into the project and import it as a module.
 
 ## Contract

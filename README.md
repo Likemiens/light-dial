@@ -90,7 +90,7 @@ The angle turns the same way three.js counts `rotation.y`, so there is no sign t
 ### With a bundler
 
 ```bash
-npm i github:Likemiens/light-dial
+npm i @likemiens/light-dial
 ```
 
 ```js
